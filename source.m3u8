@@ -1,0 +1,5 @@
+#EXTM3U
+#EXTINF:-1 tvg-ID="movistardeportes.es" tvg-name="DeportesFHD" tvg-logo="[" group-title="Live: Spain",Movistar_Deportes_FHD
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23041
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",DAILY_1
+https://dailysb3.s3.amazonaws.com/1/1.m3u8

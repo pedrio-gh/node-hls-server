@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Total TV</title>
+  </head>
+  <body>
+    <div>
+        <% channels.forEach( c => {  %>
+          <a href=<%= c.stream %> target="_blank"> <%= c.name %></a> <br/>
+        <% }) %>    
+    </div>
+  </body>
+</html>
