@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 
 NMS.init()
 
-app.get('/channels', async (req, res) => {
+app.get('/front/channels', async (req, res) => {
   const response = await got(`${API_URL}/api/streams`)
   const info = JSON.parse(response.body)
 
@@ -31,7 +31,7 @@ app.get('/channels', async (req, res) => {
   res.render('channels', { channels })
 })
 
-app.get('/player/:channelId', (req, res) => {
+app.get('/front/player/:channelId', (req, res) => {
   const { channelId } = req.params
   const source = `${process.env.API_URL}/live/${channelId}/index.m3u8`
 

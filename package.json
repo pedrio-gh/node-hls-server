@@ -15,7 +15,8 @@
     "express": "^4.17.1",
     "fluent-ffmpeg": "^2.1.2",
     "got": "^11.8.1",
-    "node-media-server": "^2.2.4",
+    "m3u8-file-parser": "^0.2.3",
+    "node-media-server": "^2.2.4"
   },
   "devDependencies": {
     "eslint": "^7.17.0",
