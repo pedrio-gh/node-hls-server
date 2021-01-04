@@ -1,5 +1,33 @@
 #EXTM3U
-#EXTINF:-1 tvg-ID="movistardeportes.es" tvg-name="DeportesFHD" tvg-logo="[" group-title="Live: Spain",Movistar_Deportes_FHD
-http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23041
-#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",DAILY_1
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C1
+https://dailysb3.s3.amazonaws.com/1/1.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C2
+https://dailysb3.s3.amazonaws.com/2/2.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C3
+https://dailysb3.s3.amazonaws.com/3/3.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C4
+https://dailysb3.s3.amazonaws.com/4/4.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C5
+https://dailysb3.s3.amazonaws.com/5/5.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C6
+https://dailysb3.s3.amazonaws.com/6/6.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C7
+https://dailysb3.s3.amazonaws.com/7/7.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C8
+https://dailysb3.s3.amazonaws.com/8/8.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C9
+https://dailysb3.s3.amazonaws.com/9/9.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C10
+https://dailysb3.s3.amazonaws.com/10/10.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C11
+https://dailysb3.s3.amazonaws.com/11/11.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C12
+https://dailysb3.s3.amazonaws.com/12/12.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C13
+https://dailysb3.s3.amazonaws.com/13/13.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C14
+https://dailysb3.s3.amazonaws.com/14/14.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C15
 https://dailysb3.s3.amazonaws.com/15/15.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",C16
+https://dailysb3.s3.amazonaws.com/16/16.m3u8
