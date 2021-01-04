@@ -24,7 +24,7 @@ app.get('/front/channels', async (req, res) => {
   const channels = Object.keys(info.live).map(channel => {
     return {
       name: channel,
-      stream: `${APP_URL}/player/${channel}`
+      stream: `${APP_URL}/front/player/${channel}`
     }
   })
 
