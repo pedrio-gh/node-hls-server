@@ -17,25 +17,25 @@ app.use((req, res, next) => {
 
 NMS.init()
 
-app.get('/front/channels', async (req, res) => {
+app.get('/', async (req, res) => {
   const response = await got(`${API_URL}/api/streams`)
   const info = JSON.parse(response.body)
 
   const channels = Object.keys(info.live).map(channel => {
     return {
       name: channel,
-      stream: `${APP_URL}/front/player/${channel}`
+      stream: `${APP_URL}/player/${channel}`
     }
   })
 
   res.render('channels', { channels })
 })
 
-app.get('/front/player/:channelId', (req, res) => {
+app.get('/player/:channelId', (req, res) => {
   const { channelId } = req.params
   const source = `${process.env.API_URL}/live/${channelId}/index.m3u8`
 
   res.render('player', { source })
 })
 
-app.listen(3000, () => console.log('Listening on por 3000'))
+app.listen(3000, () => console.log('Listening on port 3000'))

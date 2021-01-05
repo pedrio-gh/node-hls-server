@@ -23,7 +23,7 @@ module.exports.init = () => {
         {
           app: 'live',
           hls: true,
-          hlsFlags: '[hls_time=6:hls_list_size=4:hls_flags=delete_segments]'
+          hlsFlags: '[hls_time=3:hls_list_size=4:hls_flags=delete_segments]'
         }
       ]
     }
