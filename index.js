@@ -19,6 +19,8 @@ NMS.init()
 
 app.get('/', async (req, res) => {
   const response = await got(`${API_URL}/api/streams`)
+  // const listingInfo = await got('https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id=4335')
+
   const info = JSON.parse(response.body)
 
   const channels = Object.keys(info.live).map(channel => {
@@ -27,6 +29,8 @@ app.get('/', async (req, res) => {
       stream: `${APP_URL}/player/${channel}`
     }
   })
+
+  console.log(channels.length)
 
   res.render('channels', { channels })
 })
