@@ -1,5 +1,5 @@
 #EXTM3U
 #EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",MLIGA
-https://dailysb3.s3.amazonaws.com/1/1.m3u8
+https://dailysportbucket3.s3.eu-west-3.amazonaws.com/1c/1.m3u8
 #EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",MLIGA2
-https://dailysb3.s3.amazonaws.com/7/7.m3u8
+https://dailysportbucket3.s3.eu-west-3.amazonaws.com/7c/7.m3u8
