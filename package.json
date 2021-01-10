@@ -10,16 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bent": "^7.3.12",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "fluent-ffmpeg": "^2.1.2",
-    "got": "^11.8.1",
     "m3u8-file-parser": "^0.2.3",
     "node-media-server": "^2.2.4"
   },
   "devDependencies": {
     "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
