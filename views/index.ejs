@@ -70,7 +70,7 @@
               <p class="card-text"><%= event.strEvent %> @ <%= event.strTime %></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a class="btn btn-sm btn-primary" target='_blank' href='#'>View</a>
+                  <a class="btn btn-sm btn-primary" target='_blank' href=<%= `/player?channel=${league.channel}` %> >View</a>
                 </div>
                 <% if (event.strStatus === 'Match Finished') { %>
                   <span><b>Finished:</b> <%= `${event.intHomeScore} - ${event.intAwayScore}` %></span>

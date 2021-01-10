@@ -20,6 +20,7 @@ const index = async (req, res) => {
 
     return {
       info: info.leagues[0],
+      channel: 'MLIGA',
       events,
     };
   }));
