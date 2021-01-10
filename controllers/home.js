@@ -4,7 +4,6 @@ const client = new SportsApiClient({ apiKey: process.env.SPORTS_DB_API_KEY });
 const { todayString } = require('../lib/dateUtils');
 
 const LEAGUES = ['Spanish_La_Liga', 'La_Liga_2'];
-
 const index = async (req, res) => {
   const today = todayString();
 
@@ -18,6 +17,7 @@ const index = async (req, res) => {
     });
 
     const info = await client.leagueInfo(events[0].idLeague);
+
     return {
       info: info.leagues[0],
       events,
