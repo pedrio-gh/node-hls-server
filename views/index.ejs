@@ -47,7 +47,9 @@
     <div class="album py-3">
       <div class="container">
 
-        <% leaguesWithEvents.forEach(league=> { %>
+        <% leaguesWithEvents.forEach(league => { %>
+          <% if (league) { %>
+
           <div style="display: inline-block;">
             <img src=<%=league.info.strBadge %> width="60px"/>
             <span style="color: white;">
@@ -97,7 +99,7 @@
                 </div>
               </div>
               <% }) %>
-
+              <% } %>
           </div>
           <% }) %>
       </div>

@@ -18,7 +18,7 @@ const index = async (req, res) => {
 
     events = await Promise.all(events.map(async (event) => {
       const { tvevent } = await client.tvEventByEventId(event.idEvent);
-      event.channels = tvevent?.filter((tv) => CHANNELS.includes(convertChannelId(tv.strChannel)));
+      event.channels = tvevent?.filter((tv) => CHANNELS.includes(tv.strChannel));
       return event;
     }));
 
@@ -28,7 +28,7 @@ const index = async (req, res) => {
       return t1 - t2;
     });
 
-    if (events.length === 0) { return {}; }
+    if (events.length === 0) { return null; }
 
     const info = await client.leagueInfo(events[0].idLeague);
     return { info: info.leagues[0], events };
