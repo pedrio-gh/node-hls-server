@@ -4,21 +4,21 @@ const SportsApiClient = require('../sportsdb_api/client');
 const client = new SportsApiClient({ apiKey: process.env.SPORTS_DB_API_KEY });
 const { todayString } = require('../lib/dateUtils');
 
-const CHANNELS = ['bW92aXN0YXJfbGFfbGlnYV8x'];
+const CHANNELS = ['movistar_la_liga_1', 'movistar_vamos', 'supercopa_de_españa'];
 // [movistar_la_liga_1]
 
-const LEAGUES = ['Spanish_La_Liga'];
+const LEAGUES = ['spanish_la_liga', 'copa_del_rey', 'supercopa_de_españa'];
 
 const index = async (req, res) => {
   const today = todayString();
 
-  const leaguesWithEvents = await Promise.all(LEAGUES.map(async (league) => {
+  let leaguesWithEvents = await Promise.all(LEAGUES.map(async (league) => {
     let { events } = await client.eventsOnDay({ day: today, league });
     events = events || [];
 
     events = await Promise.all(events.map(async (event) => {
       const { tvevent } = await client.tvEventByEventId(event.idEvent);
-      event.channels = tvevent?.filter((tv) => CHANNELS.includes(tv.strChannel));
+      event.channels = tvevent?.filter((tv) => CHANNELS.includes(snakeCase(tv.strChannel)));
       return event;
     }));
 
@@ -34,6 +34,7 @@ const index = async (req, res) => {
     return { info: info.leagues[0], events };
   }));
 
+  leaguesWithEvents = leaguesWithEvents.filter((league) => !!league);
   res.render('index', { leaguesWithEvents });
 };
 

@@ -48,7 +48,6 @@
       <div class="container">
 
         <% leaguesWithEvents.forEach(league => { %>
-          <% if (league) { %>
 
           <div style="display: inline-block;">
             <img src=<%=league.info.strBadge %> width="60px"/>
@@ -99,9 +98,8 @@
                 </div>
               </div>
               <% }) %>
-              <% } %>
+            <% }) %>
           </div>
-          <% }) %>
       </div>
     </div>
 
