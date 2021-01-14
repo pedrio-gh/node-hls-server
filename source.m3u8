@@ -1,5 +1,3 @@
 #EXTM3U
-#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",MLIGA
-https://dailysportbucket3.s3.eu-west-3.amazonaws.com/1c/1.m3u8
-#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",MLIGA2
-https://dailysportbucket3.s3.eu-west-3.amazonaws.com/7c/7.m3u8
+#EXTINF:-1 tvg-country="ES" tvg-logo="" group-title="Undefined",Movistar_Laliga_1
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/33150

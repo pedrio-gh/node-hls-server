@@ -13,7 +13,7 @@ class SportsDbClient {
 
   // LOOKUPS
 
-  tvEventsByEventId(eventId) {
+  tvEventByEventId(eventId) {
     return this.request('/lookuptv.php', { id: eventId });
   }
 
