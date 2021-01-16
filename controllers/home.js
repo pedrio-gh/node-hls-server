@@ -18,7 +18,7 @@ const index = async (req, res) => {
 
     events = await Promise.all(events.map(async (event) => {
       const { tvevent } = await client.tvEventByEventId(event.idEvent);
-      event.channels = [] || tvevent?.filter((tv) => CHANNELS.includes(snakeCase(tv.strChannel)));
+      event.channels = tvevent?.filter((tv) => CHANNELS.includes(snakeCase(tv.strChannel)));
       return event;
     }));
 
