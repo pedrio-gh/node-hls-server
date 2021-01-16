@@ -4,7 +4,7 @@ const SportsApiClient = require('../sportsdb_api/client');
 const client = new SportsApiClient({ apiKey: process.env.SPORTS_DB_API_KEY });
 const { todayString } = require('../lib/dateUtils');
 
-const CHANNELS = ['movistar_la_liga_1', 'movistar_vamos', 'supercopa_de_españa'];
+const CHANNELS = ['movistar_la_liga_1', 'movistar_vamos', 'gol_television', 'cuatro'];
 // [movistar_la_liga_1]
 
 const LEAGUES = ['spanish_la_liga', 'copa_del_rey', 'supercopa_de_españa'];
@@ -18,7 +18,7 @@ const index = async (req, res) => {
 
     events = await Promise.all(events.map(async (event) => {
       const { tvevent } = await client.tvEventByEventId(event.idEvent);
-      event.channels = tvevent?.filter((tv) => CHANNELS.includes(snakeCase(tv.strChannel)));
+      event.channels = [] || tvevent?.filter((tv) => CHANNELS.includes(snakeCase(tv.strChannel)));
       return event;
     }));
 
