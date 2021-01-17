@@ -1,0 +1,25 @@
+{
+  "name": "node-hls-server",
+  "version": "1.0.0",
+  "description": "Easy to use NodeJS hls server, inspired by hls-server and node-media-server. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroacuma/node-hls-server.git"
+  },
+  "keywords": [
+    "hls",
+    "node",
+    "m3u8",
+    "streaming"
+  ],
+  "author": "Pedro Ávila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedroacuma/node-hls-server/issues"
+  },
+  "homepage": "https://github.com/pedroacuma/node-hls-server#readme"
+}
