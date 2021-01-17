@@ -1,0 +1,25 @@
+{
+  "name": "node-hls-server",
+  "version": "1.0.0",
+  "description": "Easy to use and configure HLS server, inspired by hls-server and node-media-server. The main reason is to develop a lighter and reduced version of node-media-server, only dedicated to HLS streamings. Hls-server does this but configuration and use its a bit more complex, my aim is to automatize it and simplify, getting the best of nms and hls-server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroacuma/node-hls-server.git"
+  },
+  "keywords": [
+    "hls",
+    "node",
+    "m3u8",
+    "streaming"
+  ],
+  "author": "Pedro Ávila",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedroacuma/node-hls-server/issues"
+  },
+  "homepage": "https://github.com/pedroacuma/node-hls-server#readme"
+}
