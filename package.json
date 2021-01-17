@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/pedroacuma/node-hls-server/issues"
   },
-  "homepage": "https://github.com/pedroacuma/node-hls-server#readme"
+  "homepage": "https://github.com/pedroacuma/node-hls-server#readme",
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1"
+  }
 }
