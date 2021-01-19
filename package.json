@@ -4,6 +4,7 @@
   "description": "Easy to use and configure HLS server, inspired by hls-server and node-media-server. The main reason is to develop a lighter and reduced version of node-media-server, only dedicated to HLS streamings. Hls-server does this but configuration and use its a bit more complex, my aim is to automatize it and simplify, getting the best of nms and hls-server.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +26,14 @@
   "devDependencies": {
     "eslint": "^7.18.0",
     "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "mkdirp": "^1.0.4",
+    "send": "^0.17.1"
   }
 }

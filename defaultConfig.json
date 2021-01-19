@@ -1,0 +1,13 @@
+{
+    "port": 3000,
+    "mediaPath": "./media",
+    "transOptions": [
+        "-c:v copy",
+        "-c:a copy"
+    ],
+    "hlsOptions": [
+        "-hls_wrap 5",
+        "-hls_time 5"
+    ],
+    "hlsFileName": "index.m3u8"
+}
