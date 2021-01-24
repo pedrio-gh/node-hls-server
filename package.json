@@ -17,12 +17,12 @@
     "m3u8",
     "streaming"
   ],
-  "author": "Pedro Ávila",
+  "author": "devfviak",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pedroacuma/node-hls-server/issues"
+    "url": "https://github.com/devfviak/node-hls-server/issues"
   },
-  "homepage": "https://github.com/pedroacuma/node-hls-server#readme",
+  "homepage": "https://github.com/devfviak/node-hls-server#readme",
   "devDependencies": {
     "eslint": "^7.18.0",
     "eslint-config-standard": "^16.0.2",
