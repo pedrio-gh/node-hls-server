@@ -19,7 +19,7 @@ server.run();
 ```javascript
 const HLSServer = require('hlsServer');
 const server = new HLSServer({
-    port: 3000,
+    port: 8080,
     mediaPath: "./media",       // Root path to store media files
     transOptions: [             // FFMPEG transcoding options
         "-c:v copy",
@@ -36,10 +36,36 @@ server.run();
 
 ## Adding streams from sources 
 ```javascript
-server.addStream('stream_name', 'path/to/video/file.mkv');
-server.addStream('stream_name2', 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8')
-server.addStream('stream_name3', 'http://clappr.io/highline.mp4')
+// addStream(streamName: String, streamSource: file path or URL)
+server.addStream('stream1', 'path/to/video/file.mkv');
+server.addStream('stream2', 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8')
+server.addStream('stream3', 'http://clappr.io/highline.mp4')
 ```
+
+## Accessing streams
+Once successfully added a stream, it will be served at:
+- localhost:{port}/{streamName}/{hslFileName}.m3u8
+
+With default config and above examples, streams could be accesed at:
+````javascript
+// M3U8 files
+http://localhost:8080/stream1/index.m3u8 
+http://localhost:8080/stream2/index.m3u8
+http://localhost:8080/stream3/index.m3u8
+
+// .ts segments files (just an example, several segments will be created and served from similar enpoints
+http://localhost:8080/stream1/index1.ts 
+http://localhost:8080/stream2/index1.ts
+http://localhost:8080/stream3/index1.ts
+````
+
+# TO DO
+
+ - [ ] Add CORS support
+ - [ ] Improve logging
+ 
+ # Contributing
+ This is my first open source project, feel free to report me errors, suggestions, anything you want.
 
 ## Disclaimer 
 This project was inspired by [node-media-server](https://github.com/illuspas/Node-Media-Server) and [hls-server](https://github.com/t-mullen/hls-server) projects. The first offers a lot of other features not related with HLS. The second is a very lightweigthed middleware that was not enought for my purposes. Both of them also include features for rtmp and other stuff I was not interested in.
