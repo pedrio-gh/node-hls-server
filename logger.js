@@ -10,15 +10,15 @@ const time = () => {
 };
 
 const error = (...args) => {
-  console.log(_error(time(), ...args));
+  console.debug(_error(time(), ...args));
 };
 
 const warning = (...args) => {
-  console.log(_warning(time(), ...args));
+  console.debug(_warning(time(), ...args));
 };
 
 const debug = (...args) => {
-  console.log(_debug(time(), ...args));
+  console.debug(_debug(time(), ...args));
 };
 
 module.exports = {
