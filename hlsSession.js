@@ -27,6 +27,7 @@ class HLSSession extends EventsEmitter {
 
     this.ffmpeg
       .addInput(this.input)
+      .addOption('-loglevel warning')
       .addOption(this.transOptions)
       .addOption('-f hls')
       .addOption(this.hlsOptions)
