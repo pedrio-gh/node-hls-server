@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 
 app.use('/', router);
 
-app.listen(3333, () => console.log('Listening on port 3333'));
+app.listen(3000, () => console.log('Listening on port 3000'));
 
 app.get('/ok', (req, res) => {
   res.send('ok');

@@ -23,13 +23,6 @@
                   <a class="btn btn-sm btn-primary" target='_blank'
                     href=<%=`/player?channel=${event.channel}` %> >View</a>
               </div>
-              <% if (event.strStatus==='Match Finished' ) { %>
-                <span><b>Finished:</b>
-                  <%= `${event.intHomeScore} - ${event.intAwayScore}` %>
-                </span>
-              <% } else if ( Date.now()>= new Date(event.strTimestamp).getTime()) { %>
-                  <div class="spinner-grow text-danger" role="status"></div>
-              <% } %>
             </div>
           </div>
   </div>
