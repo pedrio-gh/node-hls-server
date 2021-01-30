@@ -46,7 +46,7 @@ class HLSSession extends EventsEmitter {
     );
 
     this.ffmpeg.on('end', (stdout, stderr) => {
-      this.emit('end');
+      this.emit('end', this.name);
       Logger.debug('[INFO] Transcoding ended');
     });
 

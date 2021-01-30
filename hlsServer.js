@@ -39,8 +39,11 @@ class HLSServer {
     if (!this.hlsSessions.has(name)) {
       const hlsSession = new HLSSession(name, input, this.config);
       hlsSession.run();
-
       this.hlsSessions.set(name, hlsSession);
+
+      hlsSession.on('end', (name) => {
+        this.hlsSessions.delete(name);
+      });
     }
   }
 
