@@ -21,6 +21,12 @@ const HLSServer = require('hlsServer');
 const server = new HLSServer({
     port: 8080,
     mediaPath: "./media",       // Root path to store media files
+    cors: {                     // CORS options
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Request-Method": "*",
+        "Access-Control-Allow-Methods": "OPTIONS, GET",
+        "Access-Control-Allow-Headers": "*" 
+    }
     transOptions: [             // FFMPEG transcoding options
         "-c:v copy",
         "-c:a copy"
@@ -61,7 +67,6 @@ http://localhost:8080/stream3/index1.ts
 
 # TO DO
 
- - [ ] Add CORS support
  - [ ] Improve logging
  
  # Contributing

@@ -2,8 +2,12 @@ const send = require('send');
 const path = require('path');
 const logger = require('./logger');
 
-module.exports = (mediaPath) => (req, res) => {
+module.exports = (mediaPath, cors) => (req, res) => {
   const { url, method } = req;
+
+  Object.keys(cors).forEach(corsOption => {
+    res.setHeader(corsOption, cors[corsOption]);
+  });
 
   if (method === 'GET') {
     const filePath = path.resolve(mediaPath + url);
