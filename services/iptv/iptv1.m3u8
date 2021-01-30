@@ -1,0 +1,49 @@
+#EXTM3U
+#EXTINF:-1 tvg-ID="beinlaliga.es" tvg-name="ES: M. LaLiga FHD" tvg-logo="[" group-title="Live: Spain",MLIGA-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/2409
+#EXTINF:-1 tvg-ID="" tvg-name="ES: M. LaLIga 1 (event only)" tvg-logo="[" group-title="Live: Spain",MLIG1-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/7181
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. LaLiga 2FHD (event only)" tvg-logo="[" group-title="Live: Spain",MLIG2-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23104
+#EXTINF:-1 tvg-ID="" tvg-name="ES: M. LaLIga 3FHD (event only)" tvg-logo="" group-title="Live: Spain",MLIG3-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/34550
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. LaLIga 4 (event only)" tvg-logo="[" group-title="Live: Spain",MLIG4-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23103
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. LaLIga 5 (event only)" tvg-logo="[" group-title="Live: Spain",MLIG5-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23102
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. LaLIga 6 (event only)" tvg-logo="[" group-title="Live: Spain",MLIG6-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23101
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. LaLIga 7 (event only)" tvg-logo="[" group-title="Live: Spain",MLIG7-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23100
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. LaLIga 8 (event only)" tvg-logo="[" group-title="Live: Spain",MLIG8-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23099
+#EXTINF:-1 tvg-ID="movistarformula1.es" tvg-name="ES: M. Formula 1 FHD" tvg-logo="[""]" group-title="Live: Spain",MVF1-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23037
+#EXTINF:-1 tvg-ID="mligadecampeonesuhd.es" tvg-name="ES: M. Liga De Campeones FHD" tvg-logo="[" group-title="Live: Spain",CHAPIO-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23035
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. Liga De Campeones 1 FHD" tvg-logo="" group-title="Live: Spain",CHAP1-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/1441
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. Liga De Campeones 2" tvg-logo="[" group-title="Live: Spain",CHAP2-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/19204
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. Liga De Campeones 3" tvg-logo="[" group-title="Live: Spain",CHAP3-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/19203
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. Liga De Campeones 4" tvg-logo="[" group-title="Live: Spain",CHAP4-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/19202
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. Liga De Campeones 5" tvg-logo="[" group-title="Live: Spain",CHAP5-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/19201
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. Liga De Campeones 6" tvg-logo="[" group-title="Live: Spain",CHAP6-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23098
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. Liga De Campeones 7" tvg-logo="[" group-title="Live: Spain",CHAP7-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/19200
+#EXTINF:-1 tvg-ID="NULL" tvg-name="ES: M. Liga De Campeones 8" tvg-logo="[" group-title="Live: Spain",CHAP8-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/19199
+#EXTINF:-1 tvg-ID="NULL" tvg-name="VIP ES: DAZN Espana HD" tvg-logo="[" group-title="Live: Spain",M1SD-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/23016
+#EXTINF:-1 tvg-ID="NULL" tvg-name="VIP ES: DAZN Espana 2 HD" tvg-logo="[" group-title="Live: Spain",M2SD-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/26568
+#EXTINF:-1 tvg-ID="vamos.es" tvg-name="ES: # Vamos" tvg-logo="" group-title="Live: Spain",VAMOSD-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/1085
+#EXTINF:-1 tvg-ID="cuatro.es" tvg-name="ES: Cuatro hd" tvg-logo="" group-title="Live: Spain",C4-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/627
+#EXTINF:-1 tvg-ID="gol.es" tvg-name="ES: GOL T" tvg-logo="" group-title="Live: Spain",GOL-CODE
+http://portal-powerdns.club:8080/MMRb5hGc9T/2Hk1Sb205y/1084

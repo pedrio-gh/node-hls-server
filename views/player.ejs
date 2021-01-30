@@ -2,18 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>StreamBay TV</title>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
+    <meta charset="utf-8">
+    <title>StreamBay TV</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
 </head>
-	<body>
-  <div id="player"></div>
-  <script>
-    var player = new Clappr.Player({source: '<%= source %>' , parentId: "#player"});
-  </script>
-</body>
 
-  </script>
+<body style="margin: 0;">
+    <div id="player" style="width: 100vw; height: 100vh;"></div>
+    <script>
+        var player = new Clappr.Player({ 
+            source: '<%= source %>', 
+            parentId: "#player",
+            mimeType: 'audio/mpeg',
+            autoPlay: true,
+            height: '100%',
+            width: '100%',
+        });
+    </script>
 </body>
 
 </html>

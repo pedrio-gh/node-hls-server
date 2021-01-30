@@ -1,0 +1,36 @@
+<div class="col">
+  <div class="card shadow-sm">
+
+    <% if (event.strThumb) { %>
+      <img class="card-img-top" src="<%= event.strThumb %>" alt="<%= event.strEvent%>">
+    <% } else { %>
+        <svg class="bd-placeholder-img card-img-top" role="img" aria-label="<%= event.strEvent %>"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#55595c" />
+          <text x="50%" y="50%" fill="#eceeef" dy=".3em">
+            <%= event.strEvent %>
+          </text>
+        </svg>
+    <% } %>
+    
+          <div class="card-body" style="color: black;">
+            <p class="card-text">
+              <%= event.strEvent %> @ <%= event.strTimeLocal %>
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                  <a class="btn btn-sm btn-primary" target='_blank'
+                    href=<%=`/player?channel=${event.channel}` %> >View</a>
+              </div>
+              <% if (event.strStatus==='Match Finished' ) { %>
+                <span><b>Finished:</b>
+                  <%= `${event.intHomeScore} - ${event.intAwayScore}` %>
+                </span>
+              <% } else if ( Date.now()>= new Date(event.strTimestamp).getTime()) { %>
+                  <div class="spinner-grow text-danger" role="status"></div>
+              <% } %>
+            </div>
+          </div>
+  </div>
+</div>

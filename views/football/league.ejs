@@ -1,0 +1,14 @@
+<!-- LEAGUE HEADER -->
+<div style="display: inline-block;">
+    <img src=<%=league.info.strBadge %> width="60px"/>
+    <span style="color: white;">
+        <%= league.info.strLeagueAlternate %>
+    </span>
+</div>
+
+<!-- LEAGUE EVENTS CARDS -->
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 mb-2 g-3">
+    <% league.events.forEach(event => { %>
+      <%- include('./match', {event}) %> 
+    <% }) %>
+</div>
