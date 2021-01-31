@@ -7,6 +7,8 @@ const LEAGUES = require('./leagues.json');
 
 const client = new SportsApiClient({ apiKey: process.env.SPORTS_DB_API_KEY });
 
+let todayListingJSON;
+
 function findEventChannels(schedule, event) {
   return Object.keys(schedule).find((ch) => schedule[ch].PROGRAMAS.find((pr) => pr.CODIGO_GENERO === 'DP'
   && pr.DIRECTO
@@ -14,7 +16,11 @@ function findEventChannels(schedule, event) {
   || pr.TITULO.includes(event.strAwayTeam))));
 }
 
-const todayListing = async () => {
+const fetchTodayListing = async () => {
+  if (todayListingJSON && todayListingJSON.timestamp + 60 * 60 * 1000 > Date.now()) {
+    return todayListingJSON;
+  }
+
   const today = Utils.todayString();
   const scheduleResponse = await TvScheduleAPI.fetchCompleteTvSchedule(today);
   const schedule = scheduleResponse.data;
@@ -35,11 +41,12 @@ const todayListing = async () => {
     };
   });
 
-  const leaguesData = await Promise.all(apiRequests);
+  todayListingJSON = await Promise.all(apiRequests);
+  todayListingJSON.timestamp = Date.now();
 
-  return leaguesData;
+  return todayListingJSON;
 };
 
 module.exports = {
-  todayListing,
+  fetchTodayListing,
 };
