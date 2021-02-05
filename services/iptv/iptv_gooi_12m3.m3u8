@@ -1,0 +1,33 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="" tvg-name="VIP - M LALIGA HD" tvg-logo="" group-title="ES 03 MOVISTAR + LALIGA",MLIGA-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165392
+#EXTINF:-1 tvg-id="" tvg-name="VIP - M LALIGA MULTI 1 HD" tvg-logo="" group-title="ES 03 MOVISTAR + LALIGA",MLIG1-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165396
+#EXTINF:-1 tvg-id="" tvg-name="VIP - M LALIGA MULTI 2 HD" tvg-logo="" group-title="ES 03 MOVISTAR + LALIGA",MLIG2-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165398
+#EXTINF:-1 tvg-id="" tvg-name="VIP - M LALIGA MULTI 3 HD" tvg-logo="" group-title="ES 03 MOVISTAR + LALIGA",MLIG3-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165400
+#EXTINF:-1 tvg-id="" tvg-name="L CAMPEONES HD" tvg-logo="" group-title="ES 04 M+ LIGA DE CAMPEONES",CHAPIO-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165358
+#EXTINF:-1 tvg-id="" tvg-name="LIGA DE CAMPEONES 1 FHD" tvg-logo="" group-title="ES 04 M+ LIGA DE CAMPEONES",CHAP1-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165360
+#EXTINF:-1 tvg-id="" tvg-name="LIGA DE CAMPEONES 2 FHD" tvg-logo="" group-title="ES 04 M+ LIGA DE CAMPEONES",CHAP2-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165365
+#EXTINF:-1 tvg-id="" tvg-name="LIGA DE CAMPEONES 3 SD" tvg-logo="" group-title="ES 04 M+ LIGA DE CAMPEONES",CHAP3-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165371
+#EXTINF:-1 tvg-id="" tvg-name="LIGA DE CAMPEONES 4 SD" tvg-logo="" group-title="ES 04 M+ LIGA DE CAMPEONES",CHAP4-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165373
+#EXTINF:-1 tvg-id="M.FORMULA1" tvg-name="ES: MOVISTAR FORMULA 1 HD" tvg-logo="" group-title="ES 05 FORMULA",MVF1-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165419
+#EXTINF:-1 tvg-id="" tvg-name="ES: MOVISTAR DAZN 1 HD" tvg-logo="" group-title="ES 08 DAZN Y FOOTTERS",M1SD-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/209266
+#EXTINF:-1 tvg-id="" tvg-name="ES: MOVISTAR DAZN 2 HD" tvg-logo="" group-title="ES 08 DAZN Y FOOTTERS",M2SD-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/209269
+#EXTINF:-1 tvg-id="#VAMOS" tvg-name="ES: #VAMOS SD" tvg-logo="" group-title="ES 01 MOVISTAR+",VAMOSD-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165195
+#EXTINF:-1 tvg-id="CUATRO HD" tvg-name="ES: CUATRO HD" tvg-logo="" group-title="ES 01 MOVISTAR+",C4-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165106
+#EXTINF:-1 tvg-id="" tvg-name="VIP - GOL TV HD" tvg-logo="" group-title="ES 06 DEPORTES",GOL-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165449
+#EXTINF:-1 tvg-id="Telecinco.TV" tvg-name="ES: TELECINCO HD" tvg-logo="" group-title="ES 01 MOVISTAR+",T5-CODE
+http://4k.nice2021.xyz:80/OPXZFQRCYT/3469680870/165108

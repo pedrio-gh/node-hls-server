@@ -2,8 +2,9 @@ const hlsServer = require('../../lib/hlsServer');
 const iptvSwitcher = require('../../lib/iptv_switcher');
 
 hlsServer.run();
-iptvSwitcher.loadIptv(`${__dirname}/iptv1.m3u8`);
-iptvSwitcher.loadIptv(`${__dirname}/iptv2.m3u8`);
+iptvSwitcher.loadIptv(`${__dirname}/iptv_gooi_12m1.m3u8`);
+iptvSwitcher.loadIptv(`${__dirname}/iptv_gooi_12m2.m3u8`);
+iptvSwitcher.loadIptv(`${__dirname}/iptv_gooi_12m3.m3u8`);
 
 const getHlsSession = (chName) => {
   let session = hlsServer.hlsSessions.get(chName);
