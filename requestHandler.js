@@ -16,9 +16,11 @@ module.exports = (mediaPath, cors) => (req, res) => {
         .on('error', (err) => logger.error('Error serving ' + filePath, err))
         .pipe(res);
     } else {
-      res.status(400).end();
+      res.statusCode = 400;
+      res.end();
     }
   } else {
-    res.status(400).end();
+    res.statusCode = 400;
+    res.end();
   }
 };
