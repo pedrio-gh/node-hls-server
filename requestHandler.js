@@ -19,7 +19,13 @@ module.exports = (config, hlsSessions) => (req, res) => {
 
       const sessionID = url.split('/')[1];
       const hlsSession = hlsSessions.get(sessionID);
-      hlsSession.addViewer(req.socket.remoteAddress);
+
+      const requestIp = (typeof req.headers['x-forwarded-for'] === 'string' && req.headers['x-forwarded-for'].split(',').shift()) ||
+        req.connection?.remoteAddress ||
+        req.socket?.remoteAddress ||
+        req.connection?.socket?.remoteAddress;
+
+      hlsSession.addViewer(requestIp);
       hlsSession.updateLastRequestAt();
     } else {
       res.statusCode = 400;
