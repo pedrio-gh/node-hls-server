@@ -15,5 +15,6 @@
     "-hls_wrap 5",
     "-hls_time 5"
   ],
+  "ffmpegLoggingLevel": "-loglevel warning",
   "hlsFileName": "index.m3u8"
 }
