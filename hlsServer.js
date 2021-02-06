@@ -10,7 +10,7 @@ const requestHandler = require('./requestHandler');
 class HLSServer {
   constructor (config = defaultConfig) {
     this.server = null;
-    this.config = config;
+    this.config = { ...config, ...defaultConfig }; ;
     this.hlsSessions = new Map();
   }
 
@@ -23,7 +23,7 @@ class HLSServer {
       return;
     }
 
-    const port = this.config.port || 3000;
+    const port = this.config.port || 8080;
     this.server = http.createServer(requestHandler(this.config.mediaPath, this.config.cors));
 
     this.server.listen(port, (error) => {
