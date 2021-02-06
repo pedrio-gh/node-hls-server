@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "lodash": "^4.17.20",
     "m3u8-file-parser": "^0.2.3",
-    "node-hls-server": "^1.1.2",
+    "node-hls-server": "^1.1.4",
     "qs": "^6.9.6"
   },
   "devDependencies": {
