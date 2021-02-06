@@ -13,7 +13,7 @@ class HLSSession extends EventsEmitter {
     this.transOptions = options.transOptions;
     this.hlsOptions = options.hlsOptions;
     this.hlsFileName = options.hlsFileName;
-    this.ffmpegLoggingLevel = options.ffmpegLogging;
+    this.ffmpegLoggingLevel = options.ffmpegLoggingLevel;
     this.ffmpeg = FFMPEG();
   }
 
