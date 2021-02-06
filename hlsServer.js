@@ -24,7 +24,7 @@ class HLSServer {
     }
 
     const port = this.config.port || 8080;
-    this.server = http.createServer(requestHandler(this.config.mediaPath, this.config.cors));
+    this.server = http.createServer(requestHandler(this.config, this.hlsSessions));
 
     this.server.listen(port, (error) => {
       if (error) {

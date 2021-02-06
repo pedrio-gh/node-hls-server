@@ -2,7 +2,8 @@ const send = require('send');
 const path = require('path');
 const logger = require('./logger');
 
-module.exports = (mediaPath, cors) => (req, res) => {
+module.exports = (config, hlsSessions) => (req, res) => {
+  const { cors, mediaPath } = config;
   const { url, method } = req;
 
   Object.keys(cors).forEach(corsOption => {
@@ -15,6 +16,11 @@ module.exports = (mediaPath, cors) => (req, res) => {
       send(req, filePath)
         .on('error', (err) => logger.error('Error serving ' + filePath, err))
         .pipe(res);
+
+      const sessionID = url.split('/')[1];
+      const hlsSession = hlsSessions.get(sessionID);
+      hlsSession.addViewer(req.socket.remoteAddress);
+      hlsSession.updateLastRequestAt();
     } else {
       res.statusCode = 400;
       res.end();

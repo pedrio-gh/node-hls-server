@@ -15,6 +15,9 @@ class HLSSession extends EventsEmitter {
     this.hlsFileName = options.hlsFileName;
     this.ffmpegLoggingLevel = options.ffmpegLoggingLevel;
     this.ffmpeg = FFMPEG();
+
+    this.viewers = new Set();
+    this.lastRequestAt = null;
   }
 
   run () {
@@ -56,6 +59,16 @@ class HLSSession extends EventsEmitter {
 
   stop () {
     this.ffmpeg.kill('SIGKILL');
+    this.viewers = new Set();
+    this.lastRequestAt = null;
+  }
+
+  addViewer (viewer) {
+    this.viewers.add(viewer);
+  }
+
+  updateLastRequestAt () {
+    this.lastRequestAt = Date.now();
   }
 }
 
