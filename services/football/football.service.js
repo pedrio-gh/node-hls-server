@@ -1,4 +1,8 @@
+const fs = require('fs');
+const path = require('path');
+
 const { snakeCase } = require('lodash');
+
 const SportsApiClient = require('../../sportsdb_api/client');
 const TvScheduleAPI = require('../../tv_schedule_api');
 
@@ -10,8 +14,6 @@ const CHANNELS = ['MLIGA-CODE', 'MLIG1-CODE', 'MLIG2-CODE', 'MLIG3-CODE', 'MVF1-
 
 const client = new SportsApiClient({ apiKey: process.env.SPORTS_DB_API_KEY });
 
-let todayListingJSON;
-
 function findEventChannels(schedule, event) {
   return Object.keys(schedule).find((ch) => CHANNELS.includes(ch)
   && schedule[ch].PROGRAMAS.find((pr) => pr.CODIGO_GENERO === 'DP'
@@ -21,6 +23,11 @@ function findEventChannels(schedule, event) {
 }
 
 const fetchTodayListing = async () => {
+  const listingPath = path.join(__dirname, 'todayListing.json');
+  const todayListingFile = fs.readFileSync(listingPath);
+
+  let todayListingJSON = JSON.parse(todayListingFile);
+
   if (todayListingJSON && todayListingJSON.timestamp + 60 * 60 * 1000 > Date.now()) {
     return todayListingJSON;
   }
@@ -35,7 +42,7 @@ const fetchTodayListing = async () => {
 
     const events = eventsResponse.events || [];
     events.forEach((event) => {
-      event.channel = findEventChannels(schedule, event);
+      event.channel = findEventChannels(schedule, event) || 'no_channel';
     });
 
     return {
@@ -47,6 +54,7 @@ const fetchTodayListing = async () => {
 
   todayListingJSON = await Promise.all(apiRequests);
   todayListingJSON.timestamp = Date.now();
+  fs.writeFileSync(listingPath, JSON.stringify(todayListingJSON));
 
   return todayListingJSON;
 };
