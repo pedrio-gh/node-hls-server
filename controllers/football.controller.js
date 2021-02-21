@@ -8,8 +8,11 @@ const index = async (req, res) => {
 
   // Order events by start time
   leaguesWithEvents.forEach((league) => {
+    league.events = league.events.filter((ev) => ev.channel !== 'no_channel');
     league.events.sort((ev1, ev2) => new Date(ev1.strTimestamp) - new Date(ev2.strTimestamp));
   });
+
+
 
   res.render('football/section', { leaguesWithEvents });
 };
