@@ -22,7 +22,7 @@ const getHlsSession = async (chName) => {
 
     const proxy = proxies.find((p) => !p.active);
 
-    const response = await POST(`${proxy}/start`, {
+    const response = await POST(`${proxy.url}/start`, {
       id: chName,
       sourceUrl: channel.url,
     });
