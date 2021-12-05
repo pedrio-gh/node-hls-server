@@ -10,7 +10,7 @@ const requestHandler = require('./requestHandler');
 class HLSServer {
   constructor (config = defaultConfig) {
     this.server = null;
-    this.config = { ...defaultConfig, ...config }; ;
+    this.config = {  ...config }; ;
     this.hlsSessions = new Map();
   }
 
