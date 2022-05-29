@@ -10,29 +10,31 @@ module.exports = (config, hlsSessions) => (req, res) => {
     res.setHeader(corsOption, cors[corsOption]);
   });
 
-  if (method === 'GET') {
+  try {
+    if (method !== 'GET') throw new Error('Only GET method is supported')
+
     const filePath = path.resolve(mediaPath + url);
-    if (filePath.endsWith('.m3u8') || filePath.endsWith('.ts')) {
-      send(req, filePath)
-        .on('error', (err) => logger.error('Error serving ' + filePath, err))
-        .pipe(res);
+    if (!(filePath.endsWith('.m3u8') || filePath.endsWith('.ts'))) throw new Error('Bad extension file requested')
 
-      const sessionID = url.split('/')[1];
-      const hlsSession = hlsSessions.get(sessionID);
+    send(req, filePath)
+      .on('error', (err) => logger.error('Error serving ' + filePath, err))
+      .pipe(res);
 
-      const requestIp = (typeof req.headers['x-forwarded-for'] === 'string' && req.headers['x-forwarded-for'].split(',').shift()) ||
-        req.connection?.remoteAddress ||
-        req.socket?.remoteAddress ||
-        req.connection?.socket?.remoteAddress;
+    const sessionID = url.split('/')[1];
+    const hlsSession = hlsSessions.get(sessionID);
 
-      hlsSession.addViewer(requestIp);
-      hlsSession.updateLastRequestAt();
-    } else {
-      res.statusCode = 400;
-      res.end();
-    }
-  } else {
+    if (!hlsSession) throw new Error('Stream not found')
+
+    const requestIp = (typeof req.headers['x-forwarded-for'] === 'string' && req.headers['x-forwarded-for'].split(',').shift()) ||
+      req.connection?.remoteAddress ||
+      req.socket?.remoteAddress ||
+      req.connection?.socket?.remoteAddress;
+
+    hlsSession.addViewer(requestIp);
+    hlsSession.updateLastRequestAt();
+  } catch (error) {
+    logger.error('Error on request ', error)
     res.statusCode = 400;
-    res.end();
+    res.end(String(error));
   }
 };
